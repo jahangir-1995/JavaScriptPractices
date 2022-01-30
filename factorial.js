@@ -31,3 +31,31 @@ var factorial = 1;
  var nums = 5;
  var fstFacto = getFacto(nums);
  console.log(fstFacto); //Out put=120;
+
+ //function with while loop Reverse Way
+ function getfacto3(nums3){
+     let facto3 = 1;
+     let i = nums3;
+     while (i >= 1){
+         facto3 = facto3 * i;
+         i--;
+     }
+     return facto3;
+ }
+ let sndFacto = 6;
+ let newFacto = getfacto3(sndFacto);
+ console.log(newFacto);
+
+ //function with for loop Reverse Way
+ function getfacto2(num4){
+     let facto4 = 1;
+     let i = num4;
+     for(let i = num4; i >= 1; i --){
+         facto4 = facto4 * i;
+     }
+     return facto4;
+ }
+ let sndFacto2 = 6;
+ let newFacto2 = getfacto2(sndFacto2);
+ console.log(newFacto2);
+ 
