@@ -4,7 +4,9 @@ for (let i = 0; i <numbers.length; i++) {
     let element = numbers[i];
     sum = sum + element;
 }
-console.log(sum); */
+console.log(sum); //output: const numbers er jog fol asbe...
+
+*/
 
 
 // array With function
@@ -18,4 +20,4 @@ function arrayTotal (numbers2) {
     return sum2;
 }
 let total = arrayTotal(numbers2);
-console.log(total);
+console.log(total); // var const numbers2 er jog fol asbe 
