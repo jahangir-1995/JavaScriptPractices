@@ -13,10 +13,13 @@ else {
 
 
 /* ===========================
-if (business > minister && business > army) {
+const business2 = 950;
+const minister2 = 750;
+const army2 = 50;
+if (business > ministe2r && business2 > army2) {
     console.log("Business IS Bigger");
 }
-else if (minister > business && minister > army) {
+else if (minister2 > business2 && minister2 > army2) {
     console.log("Minister is Bigger");
 }
 else {
@@ -24,20 +27,21 @@ else {
 }
 ======================= */
 
-
 /* ==================
-const business2 = 950;
-const minister2 = 750;
-const army2 = 1050;
+//math.min, math.max use kore...
+const business3 = 950;
+const minister3 = 750;
+const army3 = 1050;
 
-var maxMin2 = Math.min(business2, minister2, army2);
-console.log("Small Is:", maxMin2);
+var maxMin3 = Math.min(business3, minister3, army3);
+console.log("Small Is:", maxMin3); // small ta asbe...
 
-var maxMin2 = Math.max(business2, minister2, army2);
-console.log("Big Is:", maxMin2);
+var maxMin3 = Math.max(business3, minister3, army3);
+console.log("Big Is:", maxMin3); // big ta asbe...
 ================================== */
 
-let number1 = 11;
+// function diye min max...
+let number1 = 15;
 let number2 = 12;
 let number3 = 13;
 
@@ -53,7 +57,9 @@ function bigger (fst, snd, trd) {
     }
 }
 
-// console.log(bigger(80, 90, 70)); এইটা unComment করলে let number1,2,3 বাদ দিয়ে কাজ হবে...(নিচের larger var টা বাদ যাবে)
+// console.log(bigger(80, 90, 70)); // এইটা unComment করলে let number1,2,3 বাদ দিয়ে কাজ হবে...(নিচের larger var টা বাদ যাবে)
 
 let largger = bigger(number1, number2, number3);
-console.log("Biger Is : ", largger);
+console.log("Biger Is : ", largger); // Output : jeita boro sieta asbe(number1 15)
+
+
