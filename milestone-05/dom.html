@@ -7,21 +7,112 @@
     <title>Document</title>
 </head>
 <body>
-    <article>
-        <h3>My awesome blog -1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At reprehenderit necessitatibus exercitationem ipsum aliquam veritatis, nihil non consequuntur delectus quaerat, id accusamus illo eum dolorum ducimus eos fuga voluptas sunt nobis soluta totam.</p>
-    </article>
-    <article>
-        <h3>My awesome blog -2</h3>
-        <p>Nesciunt voluptatum illo eveniet veniam. Consequatur, numquam expedita dolorem aliquid voluptatibus molestias sint vitae illo accusamus, culpa, ea natus sequi excepturi sit esse tempora voluptas. Quo sint inventore quod magnam magni praesentium porro!</p>
-    </article>
-    <article>
-        <h3>My awesome blog -3</h3>
-        <p>Repudiandae iste magni doloremque nulla harum culpa vitae, quisquam, earum officia explicabo temporibus exercitationem corporis, expedita deleniti. Provident, quos quibusdam recusandae aut suscipit facilis voluptatem quaerat, ullam repellendus commodi hic accusamus culpa odit?</p>
-    </article>
-    <article>
-        <h3>My awesome blog -4</h3>
-        <p>Laboriosam incidunt cumque consectetur asperiores, ex nostrum temporibus fugit dolores quod rem, atque ducimus perferendis quas deleniti in eaque totam omnis sed dolor eum tempora provident earum autem? Impedit voluptate distinctio quisquam ad!</p>
-    </article>
+    <header class="header-blogs">
+        <h2>Blog list</h2>
+        <ul id="blog-list">
+            <li>blog-1</li>
+            <li>blog-2</li>
+            <li>blog-3</li>
+            <li>blog-4</li>
+            <li>blog-5</li>
+        </ul>
+    </header>
+
+    <section id="blogs">
+        
+        <article class="blog">
+            <h3>My awesome blog -1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At reprehenderit necessitatibus exercitationem ipsum aliquam veritatis, nihil non consequuntur delectus quaerat, id accusamus illo eum dolorum ducimus eos fuga voluptas sunt nobis soluta totam.</p>
+        </article>
+        <article class="blog">
+            <h3 id="snd-Title">My awesome blog -2</h3>
+            <p>Nesciunt voluptatum illo eveniet veniam. Consequatur, numquam expedita dolorem aliquid voluptatibus molestias sint vitae illo accusamus, culpa, ea natus sequi excepturi sit esse tempora voluptas. Quo sint inventore quod magnam magni praesentium porro!</p>
+        </article>
+        <article class="blog">
+            <h3 id="trd-Title">My awesome blog -3</h3>
+            <p>Repudiandae iste magni doloremque nulla harum culpa vitae, quisquam, earum officia explicabo temporibus exercitationem corporis, expedita deleniti. Provident, quos quibusdam recusandae aut suscipit facilis voluptatem quaerat, ullam repellendus commodi hic accusamus culpa odit?</p>
+        </article>
+        <article class="blog">
+            <h3>My awesome blog -4</h3>
+            <p>Laboriosam incidunt cumque consectetur asperiores, ex nostrum temporibus fugit dolores quod rem, atque ducimus perferendis quas deleniti in eaque totam omnis sed dolor eum tempora provident earum autem? Impedit voluptate distinctio quisquam ad!</p>
+        </article>
+
+    </section>
+
+
+    <script>
+        const student = {name: "kismot ali", age: 35, height: 65};
+        // console.log(document.body):
+
+        const blogTitles = document.getElementsByTagName("h3");
+        //console.log(blogTitles);
+        for(const h3 of blogTitles){
+            //console.log(h3.innerText);
+        }
+
+        const blogDetails = document.getElementsByTagName("p");
+        //console.log(blogDetails);
+
+        for(const p of blogDetails){
+            //console.log(p.innerText);
+        }
+
+        const sndTitle = document.getElementById("snd-Title");
+        sndTitle.style.textAlign = "center";
+        sndTitle.innerText = "Title Updated by JS";
+        sndTitle.style.backgroundColor = "yellow";
+        sndTitle.style.padding = "10px";
+        sndTitle.style.fontSize = "30px";
+        // ekoi vabe margin,left.right,top,bottom, ba onno kisu style kora jabe,,,
+
+
+        // creat and add element by using js
+
+        // creat the element
+        const li = document.createElement("li");
+        li.innerText = "Blog-5";
+        // where to add..
+        const ul = document.getElementById("blog-list");
+        // appent new element
+        ul.appendChild(li);
+
+        //add article
+        const article = document.createElement("article");
+
+        //এইটার মাধ্যমে article cls="blog" নামে ক্লাস অ্যাড হবে...
+        article.classList.add("blog");
+
+        /* ==================================
+        const h3 = document.createElement("h3");
+        h3.innerText = "My blog - 5";
+        const p = document.createElement("p");
+        p.innerText = "magni doloremque nulla harum culpa vitae, quisquam, earum officia explicabo temporibus exercitationem corporis, expedita deleniti. Provident, quos quibusdam recusandae aut suscipit facilis voluptatem quaerat, ullam repellendus commodi hic accusamus culpa odit?";
+
+        article.appendChild(h3);
+        article.appendChild(p);
+        ================================== */
+
+        // second system
+        article.innerHTML = `
+        <h3>My Awesome Blog -5</h3>
+        <p> Magni doloremque nulla harum culpa vitae, quisquam, earum officia explicabo temporibus exercitationem corporis, expedita deleniti. Provident, quos quibusdam recusandae aut suscipit facilis voluptatem quaerat, ullam repellendus commodi hic accusamus culpa odit? </p>
+        `
+
+        //parent or article
+        const blogSection = document.getElementById("blogs");
+        blogSection.appendChild(article);
+
+
+        // class name diye style kora...
+        const blogs = document.getElementsByClassName("blog");
+
+        for(const blog of blogs){
+            blog.style.border = "2px solid red";
+            blog.style.borderRadius = "10px";
+            blog.style.marginBottom = "10px";
+            blog.style.padding = "8px";
+        }
+
+    </script>
 </body>
 </html>
