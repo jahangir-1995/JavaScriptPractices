@@ -1,5 +1,5 @@
   
-// Prolem 01 (anaToVori)
+// Problem 01 (anaToVori)
 function anaToVori(ana){
     if (typeof ana != "number"){
         return "Input a Valid Number";
@@ -8,9 +8,9 @@ function anaToVori(ana){
     return Math.abs(myAna);
 }
 
-let myAnas = 24;
-let anaToVoriConverter = anaToVori(myAnas);
-console.log(anaToVoriConverter);
+// let myAnas = 24;
+// let anaToVoriConverter = anaToVori(myAnas);
+
 
 
 
@@ -35,8 +35,8 @@ function pandaCost(singaraQuantity, somuchaQuantity, jilapiQuantity){
     return Math.abs(totalBreckFristCost);
 }
 
-let myOrderList = pandaCost(2, 2, 3);
-console.log(myOrderList);
+// let myOrderList = pandaCost(2, 2, 3);
+
 
 
 // problem 03
@@ -51,14 +51,14 @@ function  picnicBudget(totalPassengers){
 
     if(totalPassengers <= 100){
         let perPassengers = totalPassengers * 5000;
-        return perPassengers;
+        return Math.abs(perPassengers);
     }
     else if(totalPassengers <= 200){
         let fristHanderdCost = fristHandredPassengersCost * 100;
         let secontHandered = totalPassengers - 100;
         let getBonus = secondHandredPassengersCost * secontHandered;
         let allSecondHanderdCost = fristHanderdCost + getBonus;
-        return allSecondHanderdCost;
+        return Math.abs(allSecondHanderdCost);
     }
     else{
         let fristHanderdCost = fristHandredPassengersCost * 100;
@@ -66,19 +66,20 @@ function  picnicBudget(totalPassengers){
         let theirdHandred = totalPassengers - 200;
         let getBonus = getBonusPassengersCost * theirdHandred;
         let allBonus = fristHanderdCost + secontHanderedCost + getBonus;
-        return allBonus;
+        return Math.abs(allBonus);
     }
 
 }
 
-let myTotalList = 201;
-let totalList = picnicBudget(myTotalList);
-console.log(totalList);
+// let myTotalList = 201;
+// let totalList = picnicBudget(myTotalList);
+
 
 
 
 // problem 04
 function oddFriend(friendList){
+
     let oddName = "";
     for(let i = 0; i < friendList.length; i++){
         const nameList = friendLists[i]
@@ -90,7 +91,7 @@ function oddFriend(friendList){
     return oddName;
 }
 
-let friendLists = ["Al.Mamun", "Md.Manik", "Ab.Kader",  "Mostafizur", "aline"];
-let oddFriendName = oddFriend(friendLists);
-console.log(oddFriendName);
+// let friendLists = ["Al.Mamun", "Md.Manik", "Ab.Kader", "Mostafizur", "aline"];
+// let oddFriendName = oddFriend(friendLists);
+
 
