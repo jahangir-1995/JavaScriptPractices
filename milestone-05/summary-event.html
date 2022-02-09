@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event-summary</title>
+</head>
+<body>
+    <h1 id="mouse-hover">Mouse Event</h1>
+
+    <button onclick="clickMeGreen()">Click Me on Green</button>
+    <input id="email-field" type="text" placeholder="type your name">
+
+
+    <script>
+        document.getElementById("mouse-hover").addEventListener("mousemove", function(){
+            console.log("mouse moving up")
+        }); //mousemove, mouseenter, mouseout
+
+        function clickMeGreen(){
+            document.body.style.backgroundColor = "green";
+        }
+
+        document.getElementById("email-field").addEventListener("keyup", function(event){
+            console.log(event.target.value);
+        })
+    </script>
+</body>
+</html>

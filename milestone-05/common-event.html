@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Event</title>
+</head>
+<body>
+    <p id="p-click-me"></p>
+    <input id="input-field" type="text">
+    <button id="update-name">Update</button>
+    <button onclick="justFunction()">Just function</button>
+    <button id="direct-use">Direct add Event listener</button>
+
+    <!-- Script JS -->
+    <script>
+        //function diye..
+        function justFunction(){
+            const pClick = document.getElementById("p-click-me");
+            pClick.innerText = "Set Using Function";
+        }
+
+        //direct...
+        document.getElementById("direct-use").addEventListener("click", function(){
+        const pClick = document.getElementById("p-click-me");
+        pClick.innerText = "Set by Direct add event listener";
+        });
+
+        //direct with input field
+        document.getElementById("update-name").addEventListener("click", function(){
+            const inputField = document.getElementById("input-field");
+            
+        const pClick = document.getElementById("p-click-me");
+        pClick.innerText = inputField.value;
+        inputField.value = ""; //এইটা দিয়ার কারন হলো যাতে আবার ইনপুট ফিল্ড খালি হয়ে যায়
+        });
+    </script>
+</body>
+</html>
