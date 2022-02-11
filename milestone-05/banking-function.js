@@ -1,43 +1,42 @@
 
-function getInputValue () {
-    const depositInput = document.getElementById("deposit-input");
-    const depositAmountText = depositInput.value;
-    const depositAmount = parseFloat(depositAmountText);
+function getInputValue (inputId) {
+    const inputFiled = document.getElementById(inputId);
+    const inputAmountText = inputFiled.value;
+    const AmountValue = parseFloat(inputAmountText);
     // clear input filed 
-    depositInput.value = "";
+    inputFiled.value = "";
 
-    return depositAmount;
+    return AmountValue;
 }
 
 
 //handle deposit btn event
 document.getElementById("deposit-btn").addEventListener("click", function(){
-    const depositAmount = getInputValue();
+    const AmountValue = getInputValue("deposit-input");
     
     // get current deposit 
     const depositTotal = document.getElementById("deposit-total");
     const depositTotalText = depositTotal.innerText;
-    // আগের depositAmount সেট করা
+    // আগের AmountValue সেট করা
     // string কে number এ convert করা current deposit কারন current deposit হলো string
     const previousDepositTotal = parseFloat(depositTotalText);
 
-    depositTotal.innerText = previousDepositTotal + depositAmount;
+    depositTotal.innerText = previousDepositTotal + AmountValue;
 
     // update total
     const balanceTotal = document.getElementById("balance-total");
     const balanceTotalText = balanceTotal.innerText;
     const previousBalanceTotal = parseFloat(balanceTotalText);
 
-    balanceTotal.innerText = previousBalanceTotal + depositAmount;
+    balanceTotal.innerText = previousBalanceTotal + AmountValue;
 
     
 });
 
 // handle withdrow button
 document.getElementById("withdrow-btn").addEventListener("click", function(){
-    const withdrowInput = document.getElementById("withdrow-input") ;
-    const withdrowAmountText = withdrowInput.value;
-    const withdrowAmout = parseFloat(withdrowAmountText);
+
+    const withdrowAmout = getInputValue("withdrow-input");
 
     // update withdrow total
     const withdrowTotal = document.getElementById("withdrow-total");
@@ -52,7 +51,4 @@ document.getElementById("withdrow-btn").addEventListener("click", function(){
     const previousBalanceTotal = parseFloat(balanceTotalText);
 
     balanceTotal.innerText = previousBalanceTotal - withdrowAmout;
-
-    // Clear withdrow filed
-    withdrowInput.value = "";
 });
