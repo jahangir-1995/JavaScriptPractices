@@ -82,7 +82,7 @@ function oddFriend(friendList){
 
     let oddName = "";
     for(let i = 0; i < friendList.length; i++){
-        const nameList = friendLists[i]
+        const nameList = friendList[i]
         if(nameList.length % 2 != 0){
             oddName = nameList;
             break;
@@ -91,7 +91,7 @@ function oddFriend(friendList){
     return oddName;
 }
 
-// let friendLists = ["Al.Mamun", "Md.Manik", "Ab.Kader", "Mostafizur", "aline"];
-// let oddFriendName = oddFriend(friendLists);
-
+let friendList2 = ["Al.Mamun", "Md.", "Ab.Kader", "Mostafizur", "aline"];
+let oddFriendName = oddFriend(friendList2);
+console.log(oddFriendName);
 
