@@ -1,4 +1,4 @@
-function compare(a, b) {
+/* function compare(a, b) {
     if (a === b) {
       return true;
     } else {
@@ -19,4 +19,6 @@ for (let i = 1; i < array.length; i++) {
   continue;
  }
  console.log(array[i]);
-}
+} */
+
+const str1 = 'Bangladesh is a beautiful country.'; console.log(str1.endsWith("country"));
