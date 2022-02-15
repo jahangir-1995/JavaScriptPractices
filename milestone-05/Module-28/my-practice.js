@@ -46,7 +46,7 @@ function updatePrice (itemID, price){
     
         const bestPrice = document.getElementById("best-price").innerText;
         const memoryPrice = document.getElementById("memory-cost").innerText;
-        
+
         const storagePrice = document.getElementById("storage-cost").innerText;
         const deliveryPrice = document.getElementById("delivery-cost").innerText;
     
@@ -56,3 +56,21 @@ function updatePrice (itemID, price){
         total.innerText = totalPrice;
   
 }
+
+const fakeCode = "pHero";
+
+document.getElementById("apply-btn").addEventListener("click", function(){
+    const code = document.getElementById("promo-input").value;
+    if(code === fakeCode){
+        const total = document.getElementById("total-price");
+        let totalPrice = parseFloat(total.innerText);
+        
+        const discount = (totalPrice*20) / 100;
+        totalPrice = totalPrice - discount;
+
+        total.innerText = totalPrice;
+    }
+    else{
+       console.log ("Invalid code");
+    }
+});
