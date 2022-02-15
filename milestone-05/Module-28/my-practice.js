@@ -1,3 +1,9 @@
+/* 
+document.getElementById("eightGB").addEventListener("click", function(){
+
+    updatePrice("memory-cost",  0);
+});
+
 document.getElementById("sixteenGB").addEventListener("click", function(){
 
     updatePrice("memory-cost",  200);
@@ -11,7 +17,26 @@ document.getElementById("ssd3").addEventListener("click", function(){
 document.getElementById("paid-delivery").addEventListener("click", function(){
 
     updatePrice("delivery-cost",  50);
-});
+}); 
+// এইগুলার কাজ যাতে সহজে করা যায় তার জন্য নিচে ফাংশোন লিখা হইছে...
+*/
+
+onClick("eightGB","memory-cost",  0);
+onClick("sixteenGB","memory-cost",  200);
+
+onClick("ssd1","storage-cost",  0);
+onClick("ssd2","storage-cost",  220)
+onClick("ssd3","storage-cost",  280)
+
+onClick("free-delivery","delivery-cost",  0)
+onClick("paid-delivery","delivery-cost",  50)
+
+function onClick (clickId, updateId, prices){
+    document.getElementById(clickId).addEventListener("click", function(){
+        updatePrice(updateId,  prices);
+    });
+}
+
 
 
 function updatePrice (itemID, price){
@@ -21,6 +46,7 @@ function updatePrice (itemID, price){
     
         const bestPrice = document.getElementById("best-price").innerText;
         const memoryPrice = document.getElementById("memory-cost").innerText;
+        
         const storagePrice = document.getElementById("storage-cost").innerText;
         const deliveryPrice = document.getElementById("delivery-cost").innerText;
     
