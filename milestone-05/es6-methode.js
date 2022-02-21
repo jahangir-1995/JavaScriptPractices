@@ -79,22 +79,22 @@ const name3 = ["alom","roton","hosen"];
 const sms3 = name3.map(name3 => `Hello ${name3}, What Your Doing Now`);
 console.log(sms3); //output:['Hello alom, What Your Doing Now', 'Hello roton, What Your Doing Now', 'Hello hosen, What Your Doing Now']
 
+
 // filter 
 const newArr = [1,2,3,4,5,6,7,8,9,10];
-let filteredArr = [];
 
-// odd numbers (jor numbers asbe)
-for(let num4 of newArr){
-    if(num4 % 2 == 0){
-        filteredArr.push(num4);
-    }
-}
+/* const filteredArr = newArr.filter(number10 => number10 % 2 === 0);
 console.log(filteredArr);
 
-// even numbers (bijor numbers asbe)
-for(let num4 of newArr){
-    if(num4 % 2 != 0){
-        filteredArr.push(num4);
-    }
-}
-console.log(filteredArr);
+const newArr = [1,2,3,4,5,6,7,8,9,10];
+ */
+
+const filteredArr = newArr.filter(number10 => number10 % 2 != 0);
+console.log("Bijor", filteredArr);
+
+
+// find 
+const newArr2 = ["manik","roton","manikroton","meraj", "murtuzas"];
+const found = newArr2.find(name7 => name7.length % 2 != 0);
+console.log(found); //find condition true hole fast a je thakebe seita dekhabe..
+// snd position pete hole console.log(found[1])
