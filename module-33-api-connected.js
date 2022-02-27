@@ -20,8 +20,24 @@ function displayUser(data){
     }
 }
 
+// btn a onclick deya ase..
 function loadPost(){
     fetch("https://jsonplaceholder.typicode.com/posts")
         .then(res => res.json())
-        .then(data => console.log(data));
+        .then(data => displayPost(data));
+}
+
+function displayPost(posts){
+    const postContainer = document.getElementById("posts");
+
+    for(const post of posts ){
+        console.log(post.title);
+        const div = document.createElement("div");
+        div.classList.add("post");
+        div.innerHTML = `<h3>${post.title}</h3>
+            <p>${post.body}</h3>
+        `;
+        postContainer.appendChild(div);
+        console.log(post.title);
+    }
 }
